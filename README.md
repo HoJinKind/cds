@@ -9,11 +9,12 @@ Boot up:
 
 
 What kind of testing would you perform on the application in addition to unit testing?
-
+For unit testing:
 - Junit mockito, with reflections through org.powermock.reflect.Whitebox.invokeMethod to test the service business logic.
 - deep stubs if required
 - ReflectionTestUtils.setField(...) for setting class variables. 
-  
+Besides That: 
+- my experience has been with QA teams where they come up witht he test cases for us to run through first, and also once more on the Testnet environment before dpeloying to production.
 
 ● How would you scale up the system to handle potentially millions of files?
 - a redis lock (on the names) would be required on the insertions to ensure that no two containers are inseting a id at the same time.

@@ -27,6 +27,6 @@ public class FileUtil {
         } catch (IOException e) {
             return SuccessResult.successValue(0);
         }
-        return null;
+        return SuccessResult.successValue(1);
     }
 }

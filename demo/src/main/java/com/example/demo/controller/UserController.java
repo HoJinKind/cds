@@ -40,6 +40,7 @@ public class UserController {
                                              @RequestParam(required = false) Integer limit,
                                              @RequestParam(required = false) String sort
     ) throws Exception {
+//        throw  new Exception("111");
         System.out.println(sort);
         List<User> users = userService.getUsers(min, max, offset, limit,sort);
         return Result.success(users);

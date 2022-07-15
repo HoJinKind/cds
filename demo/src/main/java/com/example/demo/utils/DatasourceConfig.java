@@ -37,13 +37,9 @@ public class DatasourceConfig {
 
     @Bean("dataSource")
     @Primary
+    @ConfigurationProperties(prefix = "spring.datasource.mydb")
     public DataSource dataSource() {
         return DataSourceBuilder.create()
-                .url(this.url)
-                .username(this.username)
-                .password(this.password)
-                .driverClassName(this.driverClassName)
-                .type(HikariDataSource.class)
                 .build();
     }
 

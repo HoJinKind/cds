@@ -39,7 +39,7 @@ public class UserController {
                                              @RequestParam(required = false) Integer offset,
                                              @RequestParam(required = false) Integer limit,
                                              @RequestParam(required = false) String sort
-    ) {
+    ) throws Exception {
         System.out.println(sort);
         List<User> users = userService.getUsers(min, max, offset, limit,sort);
         return Result.success(users);
